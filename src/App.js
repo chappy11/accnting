@@ -1,170 +1,34 @@
 import logo from './logo.svg';
 import {useState,useEffect} from 'react'
 import './App.css';
-import {v4 as uuidv4} from 'uuid';
-function sortFunction(a,b){  
-  var dateA = new Date(a.date).getTime();
-  var dateB = new Date(b.date).getTime();
-  return dateA > dateB ? 1 : -1;  
-}; 
-function status(debit,credit){
-  let dif = debit - credit;
-  if(dif < 0 ){
-    return "Logi ka boi"
-  }else if(dif!==0){
-    return dif
-  }else{
-    return "Balance";
-  }
-}
+//import {v4 as uuidv4} from 'uuid';
+import {useSpring, animated as a} from 'react-spring'
 function App() {
-  const [debit, setdebit] = useState([
-  ]);
-  const [credit, setcredit] = useState([]);
-  const totaldebit = debit.reduce((tots,debt) => tots + parseInt(debt.amount,10),0);  
-  const totalcredit = credit.reduce((tots,cred) => tots + parseInt(cred.amount,10),0);
-  const sortedebit = debit.sort(sortFunction);
-  const sortedcredit = credit.sort(sortFunction);
-  const [isbalance, setisbalance] = useState();
-  const [input, setinput] = useState(
-    {
-      date:"",
-      desc:"",
-      amount:0,
-      type:""
-    }
-  )
+  const [flipped, set] = useState(false)
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 }
+  })
+    return (
   
-  const onChange = e =>{
-    setinput({
-      ...input,
-      [e.target.name]:e.target.value
-    })
-  }
-  const onClick = (e)=>{
-    e.preventDefault();
-    if(input.date==="" || input.desc==="" || input.amount===""){
-      alert("Fill out all fields")
-    }else{
-    const newTodo = {
-      id:uuidv4(),
-      date:input.date,
-      desc:input.desc,
-      amount:input.amount 
-    }
-    if(input.type==="debit"){
-      setdebit([...debit,newTodo]);  
-      setinput({
-        id:"",
-        date:"",
-        desc:"",
-        amount:""
-      })
-    }else if(input.type==="credit"){
-      setcredit([...credit,newTodo])
-      setinput({
-        id:"",
-        date:"",
-        desc:"",
-        amount:""
-      })
-    }else{
-        alert("none");
-    }
-  }
-  }
-  const deletecredit = e =>{
-  setcredit([...credit.filter(cred => cred.id!==e.target.value)]);
-  }
-  const deletedebit = e =>{
-    setdebit([...debit.filter(deb => deb.id!==e.target.value)]);
-    }
- 
-  return (
-    <div className="App">
-     <nav className="navbar navbar-light bg-light">
-       <a className="navbar-brand" href="">Accounting</a>
-    </nav>
-      
-        <div className="border">
-      <div className="row">
-        <div className="col">
-          <input type="date" className="form-control" placeholder="Name" name="date" onChange={onChange} value={input.date}/>
-        </div>
-        <div className="col">
-          <input className="form-control" placeholder="Description" name="desc" value={input.desc} onChange={onChange}/>
-        </div>
-        <div className="col">
-          <input className="form-control" placeholder="Amount" name="amount" value={input.amount}  onChange={onChange}/>
-        </div>
-        <div className="col">
-            <select name="type" className="form-control" onChange={onChange}>
-              <option value="none">Pls Choose</option>
-              <option value="credit">Credit</option>
-              <option value="debit">Debit</option>
-            </select>
-        </div>
-      </div>
-      <br></br>
-      <button className="btn btn-success" onClick={onClick}>Add Entry</button>
-      </div>
-      <div className="margin">
-            <p>Status: 
-            {status(totaldebit,totalcredit)}
-            </p>
-            <div className="row">
-            <div className="col">
-              <p className="title">Debit</p>
-              <p>Total: {totaldebit}</p>
-                <table class="table">  
-                  <thead>
-                    <tr>
-                      <th scope="col">Date</th>
-                      <th scope="col"> </th>
-                      <th scope="col">Cash</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {sortedebit.map((res,index) =>(
-                      <tr key={index}>
-                        <td>{res.date}</td>
-                        <td>{res.desc}</td>
-                        <td>{res.amount}</td>
-                        <td><button className="btn btn-danger btn-sm" onClick={deletedebit} value={res.id} >Remove</button></td>
-                      </tr>
-                    ))}
-                  </tbody>
-              </table>
-
-           </div>
-          <div className="col">
-              <p className="title">Credit</p>
-              <p>Total: {totalcredit}</p>
-              <table class="table">  
-                  <thead>
-                    <tr>
-                      <th scope="col">Date</th>
-                      <th scope="col"> </th>
-                      <th scope="col">Cash</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {sortedcredit.map((res,index) =>(
-                      <tr key={index}>
-                        <td>{res.date}</td>
-                        <td>{res.desc}</td>
-                        <td>{res.amount}</td>
-                        <td><button className="btn btn-danger btn-sm" onClick={deletecredit} value={res.id} >Remove</button></td>
-                      </tr>
-                    ))}
-                  </tbody>
-              </table>
-                 
-
-          </div>
-      </div>
-  </div>
-
+   
+   <div onClick={() => set(state => !state)}>
+      <a.div class="c back" style={{ opacity: opacity.interpolate(o => 1 - o), transform }} >       <div className="text display-5">Happy Valentines day</div></a.div>
+      <a.div class="c front" style={{ opacity, transform: transform.interpolate(t => `${t} rotateY(180deg)`) }}>
+          <blockquote className="blockqoute">
+              <p className="mb-0 title lead">
+                Dear mylab,
+              </p>
+              <p className="mb-0 message ">
+                Happy Valentines mylab, sorry if this is the only thing that i can give you in this day.
+                Kabaw naman sad siguro kas akong feelings para nimo kung unsa tika ka love og unsa ka impartante sakoa.
+                I know werent on the same path but lets just continue until the would come we will taking the same path until in the end.
+                (batia ani oie HAHHAHAHAHA) basta pasabot ana padayon lang ta hantod sa hantod amen. Thank sad lab sa mga things nga gebuhat nimo
+                para nako sa pag sabot sa , sa pag love and many more. ahak d ko kabaw express sako feeling in writing maong kani lang sa mylab.. i love youu (heart)
+              </p>
+          </blockquote>
+      </a.div>
     </div>
   );
 }

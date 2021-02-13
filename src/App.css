@@ -1,20 +1,64 @@
-*{
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  background:whitesmoke;
 }
 
-.margin{
-margin: 2% 5% 0 5%;
+#root > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.c {
+  position: absolute;
+  max-width: 400px;
+  max-height: 800;
+  width: 40ch;
+  margin: 0 100px;
+  height: 60ch;
+  
+  cursor: pointer;
+  will-change: transform, opacity;
+}
+
+.front,
+.back {
+  background-size: cover;
+}
 .title{
-  font-size: 20px;
-  font-weight: bold;
+  text-align: left;
+  padding: 20px 20px;
+  color: grey;
+}
+.message{
+  color:grey;
+  padding: 10px 20px;
+  text-align: left;
+  font-family:cursive;
+  font-size: 18px;
+}
+.front{
+  background-color:wheat;
 }
 
-.border{
-  border-bottom: 1px solid black;
-  padding: 20px;
+.back {
+  background-image: url("./images/annie-spratt-fwKffp5QHiA-unsplash.jpg");
+}
+
+.text {
+  color:black;
+  font-weight: bolder;
+  font-family: cursive;
+  position: relative;
+ text-align: center;
+ font-size: 50px;
 }

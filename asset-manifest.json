@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/accnting/static/css/main.83f5bf2d.chunk.css",
-    "main.js": "/accnting/static/js/main.675a6b2f.chunk.js",
-    "main.js.map": "/accnting/static/js/main.675a6b2f.chunk.js.map",
-    "runtime-main.js": "/accnting/static/js/runtime-main.50a956e8.js",
-    "runtime-main.js.map": "/accnting/static/js/runtime-main.50a956e8.js.map",
+    "main.css": "/accnting/static/css/main.130c3937.chunk.css",
+    "main.js": "/accnting/static/js/main.c2cb901d.chunk.js",
+    "main.js.map": "/accnting/static/js/main.c2cb901d.chunk.js.map",
+    "runtime-main.js": "/accnting/static/js/runtime-main.c759c897.js",
+    "runtime-main.js.map": "/accnting/static/js/runtime-main.c759c897.js.map",
     "static/css/2.ae9f1eb3.chunk.css": "/accnting/static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.24927632.chunk.js": "/accnting/static/js/2.24927632.chunk.js",
-    "static/js/2.24927632.chunk.js.map": "/accnting/static/js/2.24927632.chunk.js.map",
-    "static/js/3.03335849.chunk.js": "/accnting/static/js/3.03335849.chunk.js",
-    "static/js/3.03335849.chunk.js.map": "/accnting/static/js/3.03335849.chunk.js.map",
+    "static/js/2.081ee3ae.chunk.js": "/accnting/static/js/2.081ee3ae.chunk.js",
+    "static/js/2.081ee3ae.chunk.js.map": "/accnting/static/js/2.081ee3ae.chunk.js.map",
+    "static/js/3.0908f46b.chunk.js": "/accnting/static/js/3.0908f46b.chunk.js",
+    "static/js/3.0908f46b.chunk.js.map": "/accnting/static/js/3.0908f46b.chunk.js.map",
     "index.html": "/accnting/index.html",
     "static/css/2.ae9f1eb3.chunk.css.map": "/accnting/static/css/2.ae9f1eb3.chunk.css.map",
-    "static/css/main.83f5bf2d.chunk.css.map": "/accnting/static/css/main.83f5bf2d.chunk.css.map",
-    "static/js/2.24927632.chunk.js.LICENSE.txt": "/accnting/static/js/2.24927632.chunk.js.LICENSE.txt",
+    "static/css/main.130c3937.chunk.css.map": "/accnting/static/css/main.130c3937.chunk.css.map",
+    "static/js/2.081ee3ae.chunk.js.LICENSE.txt": "/accnting/static/js/2.081ee3ae.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/accnting/static/media/annie-spratt-fwKffp5QHiA-unsplash.ee6ec7cf.jpg",
     "static/media/logo.6ce24c58.svg": "/accnting/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.50a956e8.js",
+    "static/js/runtime-main.c759c897.js",
     "static/css/2.ae9f1eb3.chunk.css",
-    "static/js/2.24927632.chunk.js",
-    "static/css/main.83f5bf2d.chunk.css",
-    "static/js/main.675a6b2f.chunk.js"
+    "static/js/2.081ee3ae.chunk.js",
+    "static/css/main.130c3937.chunk.css",
+    "static/js/main.c2cb901d.chunk.js"
   ]
 }

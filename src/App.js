@@ -23,7 +23,7 @@ function App() {
               <p className="mb-0 message ">
                 Happy Valentines mylab, sorry if this is the only thing that i can give you in this day.
                 Kabaw naman sad siguro kas akong feelings para nimo kung unsa tika ka love og unsa ka impartante sakoa.
-                I know werent on the same path but lets just continue until the would come we will taking the same path until in the end.
+                I know werent on the same path but lets just continue until the day would come that we will taking the same path until in the end.
                 (batia ani oie HAHHAHAHAHA) basta pasabot ana padayon lang ta hantod sa hantod amen. Thank sad lab sa mga things nga gebuhat nimo
                 para nako sa pag sabot sa , sa pag love and many more. ahak d ko kabaw express sako feeling in writing maong kani lang sa mylab.. i love youu (heart)
               </p>
